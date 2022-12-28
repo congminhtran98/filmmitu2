@@ -1,0 +1,144 @@
+.watch-movie-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  animation: fadeIn 0.5s linear;
+  flex-wrap: wrap;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+.watch-wrap {
+  width: 76%;
+}
+
+.watch-movie {
+  aspect-ratio: 16/9;
+  background-color: black;
+}
+
+.simularMovie {
+  width: 20%;
+}
+
+.movie-name {
+  color: #fff;
+  margin: 20px 0;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.movie-overview {
+  color: #fff;
+}
+
+.movie-release_date {
+  color: #fff;
+  margin: 20px 0;
+}
+
+.watch-tv-container {
+  display: flex;
+  margin-top: 4rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  margin-left: 4rem;
+}
+
+.watch-tv {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-color: black;
+}
+
+.watch-tv-in4 {
+  width: 100%;
+}
+
+.watch-tv-other-season {
+  width: 22%;
+  height: 600px;
+  overflow-y: auto;
+}
+
+.watch-tv-link {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+  flex-direction: column;
+  background-color: #222;
+}
+
+.watch-tv-link:last-child {
+  margin-bottom: 0px;
+}
+
+.watch-tv-season-img {
+  height: 100%;
+  width: 100%;
+  padding-top: 0;
+  margin-top: 0;
+  aspect-ratio: 3/4;
+}
+
+.info-esp-season {
+  width: 100%;
+  background-color: #222;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  color: #fff;
+}
+
+.info-esp-season p {
+  margin: 5px 0;
+}
+
+.esp-list {
+  background-color: #222;
+  overflow: hidden;
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  color: #fff;
+}
+
+.esp-list.active {
+  background-color: #e67e22;
+}
+
+.esp-item {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.esp-item-img {
+  width: 116px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.esp-item-name {
+  padding: 0 10px;
+  margin: 4px 0;
+}
+
+.watch-tv-in4 h1 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+.watch-tv-in4 p {
+  color: #fff;
+  font-size: 18px;
+  margin: 20px 0;
+  line-height: 1.6;
+}

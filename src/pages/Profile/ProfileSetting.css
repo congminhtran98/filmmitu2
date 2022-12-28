@@ -1,0 +1,82 @@
+.profileScreen {
+  margin-top: 5rem;
+  height: auto;
+  color: white;
+  background-color: black;
+}
+.profileScreen_body {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 8%;
+}
+
+.profileScreen_body label {
+  font-size: 40px;
+  color: white;
+}
+.profileScreen_body p {
+  font-size: 16px;
+  color: gray;
+  font-weight: 600;
+}
+
+.profileScreen_article {
+  display: flex;
+  margin: 1rem 0rem;
+  padding: 1rem 0rem;
+  border-top: 1px solid gray;
+  gap: 6%;
+}
+
+.profileScreen_label {
+  width: 27%;
+}
+.profileScreen_label div{
+  margin: 1rem auto 2rem auto;
+}
+.profileScreen_content {
+  margin-top: 1rem;
+  width: 40%;
+}
+.profileScreen_footer {
+  width: 27%;
+}
+
+.profileScreen_footer3 {
+  color: blue;
+  padding: 5px 0px;
+}
+.profileScreen_footer3:hover {
+  cursor: pointer;
+}
+
+.profileScreen_footer button {
+  padding: 1.5rem;
+  background-color: red;
+  color: white;
+  opacity: 0.9;
+  border-radius: 5px;
+  line-height: 0px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.profileScreen_footer button:hover {
+  cursor: pointer;
+  opacity: 1.2;
+}
+
+.profileScreen_label button {
+  margin: auto; 
+  opacity: 0.9;
+}
+.profileScreen_label button:hover {
+  opacity: 1.2;
+  cursor: pointer;
+}
+
+.profileScreen_content1 {
+  padding-bottom: 10px;
+}

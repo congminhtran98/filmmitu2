@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.film-content{
+    margin: auto;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    max-width: 900px;
+}
+
+.rating-box{
+    padding-top: 20px;
+}
+.rating-star{
+    color: yellow;
+    cursor: pointer;
+}
+
+.filminfo-box{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+.filminfo-box li{
+    width: 26%;
+    padding: 20px 0 20px 0;
+}
+.filminfo-box label{
+    font-weight: 800;
+    color: antiquewhite;
+}
+
+.filmcontent-box{
+    padding: 20px 0 20px 0;
+}
+
+.filmtag-box{
+    padding: 20px 0 20px 0;
+}
+
+.header{
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: red;
+}

@@ -1,0 +1,47 @@
+.movie-item {
+  border: 1px solid white;
+  width: 100%;
+  overflow: visible;
+}
+
+.movie-item img {
+  height: 80%;
+}
+
+.movie-item:hover {
+  scale: 1.3;
+  transition: 0.3s;
+}
+
+.movie-item-title {
+  color: white;
+  margin-top: 10px;
+}
+
+.movie-item-hover {
+  padding: 3rem 1rem;
+  position: absolute;
+  color: white;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+.movie-item-hover div {
+  margin: 1rem auto;
+  font-size: 0.8rem;
+}
+.movie-item-hover label {
+  font-size: 0.8rem;
+}
+.movie-item-hover p {
+  font-size: 0.6rem;
+}
+.movie-item-hover yellow {
+  color: yellow;
+}

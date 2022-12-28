@@ -1,0 +1,128 @@
+.banner {
+  height: 60vh;
+  position: relative;
+  color: white;
+  object-fit: contain;
+  width: 100%;
+}
+
+.banner_gradient{
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+}
+
+.banner_contents {
+  width: 36%;
+  position: absolute;
+  margin-top: -560px;
+  margin-left: 30px;
+  padding-top: 140px;
+}
+
+.banner_title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  padding-bottom: 0.3rem;
+}
+
+.banner_description {
+  width: 45rem;
+  line-height: 1.5;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  max-width: 100%;
+  height: 80px;
+  font-weight: 300;
+}
+
+.banner_buttons {
+  display: flex;
+  margin: 0.6rem;
+}
+.banner_button_right {
+  display: flex;
+  gap: 0.5rem;
+}
+.banner_button_right1 {
+  color: white;
+  background-color: rgba(50, 50, 50, 0.5);
+  font-size: 2rem;
+  padding: 5px;
+}
+.banner_button_right1:hover {
+  cursor: pointer;
+  color: #000;
+  background-color: white;
+  transition: all 0.2s;
+}
+
+.banner_button {
+  color: white;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  border-radius: 0.2vw;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-right: 1rem;
+  padding-top: 0.5rem;
+  background-color: rgba(50, 50, 50, 0.5);
+  padding-bottom: 0.5rem;
+}
+.banner_button:hover {
+  cursor: pointer;
+  color: #000;
+  background-color: white;
+  transition: all 0.2s;
+}
+.banner_button1 {
+  color: white;
+  outline: none;
+  border: none;
+  font-weight: 800;
+  border-radius: 50%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-right: 1rem;
+  padding-top: 0.5rem;
+  background-color: rgba(50, 50, 50, 0.5);
+  padding-bottom: 0.5rem;
+}
+.banner_button1:hover {
+  cursor: pointer;
+  color: black;
+  background-color: white;
+  transition: all 0.2s;
+}
+
+.banner video {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.banner_button_hover {
+  width: 56vw;
+  height: 59vh;
+  margin-top: -36%;
+  margin-left: 100%;
+  position: absolute;
+  background-image: url('../../images/banner.jpg');
+  background-size: cover;
+  opacity: 1;
+  border: 1px solid white;
+}
+
+.banner_button_hover div {
+  padding: 10px;
+  color: white;
+}
+.banner_button_hover h1 {
+  padding: 10px;
+  color: white;
+}

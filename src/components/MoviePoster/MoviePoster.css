@@ -1,0 +1,233 @@
+.movieposter-wrapper {
+    position: relative;
+    width: 12vw;
+
+}
+
+.movie-posters {
+    /* transform: scale(1); */
+    width: 12vw;
+    height: 18vw;
+    user-select: none;
+    cursor: pointer;
+    border-radius:  4px;
+    /* -o-transition: all 0.8s cubic-bezier(0.81, 0.01, 0.27, 1.55);
+    -ms-transition: all 0.8s cubic-bezier(0.81, 0.01, 0.27, 1.55);
+    -webkit-transition: all 0.8s cubic-bezier(0.81, 0.01, 0.27, 1.55);
+    -moz-transition: all 0.8s cubic-bezier(0.81, 0.01, 0.27, 1.55); */
+    transition: transform 0.5s cubic-bezier(0.81, 0.01, 0.27, 1.55);
+}
+
+.movie-posters:hover{
+    position: absolute;
+    top: -0vw;
+    left: 0;
+    z-index: 50;
+    transform: scale(1.11);
+    /* width: 21.4vw; */
+    background: #141414;
+    /* -webkit-box-shadow: 0px 0px 10px 0px rgba(255,255,255,0.55); 
+    box-shadow: 0px 0px 10px 0px rgba(255,255,255,0.55); */
+    animation-name: goIn;
+    animation-duration: 0.5s;
+    transition-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+
+@keyframes goIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+.movie-posters:hover .movie-img  {
+    border-radius: 4px;
+    -o-transition: all 0.8s cubic-bezier(0.81, 0.01, 0.27, 1.55);
+    -ms-transition: all 0.8s cubic-bezier(0.81, 0.01, 0.27, 1.55);
+    -webkit-transition: all 0.8s cubic-bezier(0.81, 0.01, 0.27, 1.55);
+    -moz-transition: all 0.8s cubic-bezier(0.81, 0.01, 0.27, 1.55);
+    transition: all 0.8s cubic-bezier(0.81, 0.01, 0.27, 1.55);
+    transition-delay: 0.8s;
+    animation: changeOpacity 0.8s;
+}
+
+
+@keyframes changeOpacity {
+    0% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+.movie-img {
+    width: 12vw;
+    height: 100%;
+    background-size: cover;
+    border-radius: 4px;
+    /* -o-transition: all 0.8s cubic-bezier(0.81, 0.01, 0.27, 1.55);
+    -ms-transition: all 0.8s cubic-bezier(0.81, 0.01, 0.27, 1.55);
+    -webkit-transition: all 0.8s cubic-bezier(0.81, 0.01, 0.27, 1.55);
+    -moz-transition: all 0.8s cubic-bezier(0.81, 0.01, 0.27, 1.55);
+    transition: all 0.8s cubic-bezier(0.81, 0.01, 0.27, 1.55); */
+}
+
+.movie-backdrop {
+    -webkit-box-shadow: 0px 0px 18px 7px rgba(0,0,0,0.6); 
+    box-shadow: 0px 0px 18px 7px rgba(0,0,0,0.6);
+    width: 21.4vw;
+    height: 12vw;
+    background-size: cover;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px ;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.movie-posters:hover .poster-info {
+    opacity: 1;
+    /* transition-delay: 10s; */
+    top: 9vw;
+}
+
+.poster-info {
+    -webkit-box-shadow: 3px 18px 14px 0px rgba(0,0,0,0.6); 
+    box-shadow: 3px 18px 14px 0px rgba(0,0,0,0.6);
+    position: absolute;
+    opacity: 0;
+    top: 10vw;
+    padding: 0.5vw;
+    width: 20.4vw;
+    background: rgb(20,20,20);
+    background: linear-gradient(0deg, rgba(20,20,20,1) 59%, rgba(20,20,20,0.9721638655462185) 67%, rgba(20,20,20,0.5519957983193278) 82%, rgba(20,20,20,0.2774859943977591) 89%, rgba(20,20,20,0.15423669467787116) 94%, rgba(20,20,20,0) 100%);
+}
+
+.poster-title {
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
+    font-weight: bold;
+    letter-spacing: 0.1vw;
+    font-size: 1.2vw;
+    margin-left: 0.2vw;
+}
+
+
+.poster-icons {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.poster-icons .poster-icon-like {
+    border-radius: 50%;
+    padding: 5px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    font-size: 1.5em;
+    margin-right: 0.4vw;
+    margin-left: 0.2vw;
+}
+
+.poster-icons .poster-icon-add {
+    font-size: 2.1em;
+    margin-right: 0.4vw;
+    margin-left: 0.4vw;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    background-color: transparent;
+}
+
+.poster-icons .poster-icon-arrow {
+    font-size: 2em;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    margin-top: 3px;
+}
+
+.poster-icons .poster-icon-play {
+    font-size: 2em;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.7)
+}
+
+.poster-icon-play:hover {
+    background-color: #b1aeae;
+    border: 2px solid #b1aeae;
+}
+
+.poster-icon-like:hover,
+.poster-icon-add:hover,
+.poster-icon-arrow:hover {
+    border: 2px solid rgba(255, 255, 255, 1);
+}
+
+.poster-genres {
+    color: #b1aeae;
+    font-size: .9vw;
+    transform: translateX(-0.9%);
+}
+
+.poster-genres ul {
+    padding: 0;
+    display: flex;
+}
+
+.poster-genres ul li {
+    margin-left: 0.5vw;
+    list-style: none;
+}
+
+
+
+.poster-info-top  {
+    margin-bottom: 0.1vw;
+}
+
+.poster-vote {
+    font-size: .9vw;
+    color: #46d369;
+    margin-left: 0.2vw;
+    margin-right: 1vw;
+    /* font-weight: 700; */
+    letter-spacing: 0.05vw;
+}
+
+.poster-season {
+    font-size: .9vw;
+    letter-spacing: 0.05vw;
+
+}
+
+.embed-youtube {
+    overflow: hidden;
+}
+
+.movie-trailer-cover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 21.4vw;
+    height: 12vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+

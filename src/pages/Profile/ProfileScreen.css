@@ -1,0 +1,43 @@
+.profileScreen_info {
+  display: flex;
+}
+
+.profileScreen_body > h1 {
+  font-size: 4rem;
+  font-weight: 500  ;
+  border-bottom: 1px solid gray;
+  margin-bottom: 20px;
+}
+.profileScreen_info > img {
+  object-fit: contain;
+  width: 12rem;
+}
+
+.profileScreen_details {
+  margin-left: 2rem;
+}
+
+.profileScreen_details > h2 {
+  background-color: gray;
+  padding: 1rem;
+  font-size: 1rem;
+  padding-left: 1.2rem;
+  width: 100%;
+}
+
+.profileScreen_signOut {
+  padding: 0.6rem;
+  margin: 0.6rem auto;
+  width: 80%;
+  color: white;
+  background-color: red;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  opacity: 0.7;
+  text-align: center;
+}
+.profileScreen_signOut:hover{
+  opacity: 1;
+}
+

@@ -1,0 +1,31 @@
+.site-footer{
+    border-top: 8px solid #222;
+    background-color: black;
+    color: red;
+}
+
+.footer-top{
+    padding: 40px;
+}
+
+.footer-links{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+.footer-links li{
+    width: 26%;
+    padding: 20px;
+}
+.footer-links li:hover{
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+.footer-top:hover{
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}

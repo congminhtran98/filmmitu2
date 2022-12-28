@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.App {
+  background-color: black;
+  overflow: hidden;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.disabled-link {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-rendering: optimizeSpeed;
+}
+
+.container {
+  width: 90%;
+  max-width: calc(100% - 2rem);
+  margin: 0 auto;
+}
+
+.margin-top {
+  margin-top: 5rem;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.grid-gap-1rem-1rem {
+  grid-gap: 1.2rem;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes skeleton {
+  0% {
+    background-color: hsl(200, 20%, 70%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
+
+.load-more {
+  text-align: center;
+  margin: 2rem;
+}
+
+.load-more-button {
+  padding: 0.6rem;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.load-more-button:hover {
+  background-color: black;
+  color: red;
+  border: 1px solid red;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 4px;
+  height: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: gray;
+}
+
+.skeleton {
+  animation: skeleton 1s linear infinite alternate;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.mr-bottom-20px {
+  margin-bottom: 1.2rem !important;
+}
+
+.mr-top-20px {
+  margin-top: 1.2rem !important;
+}
+
+.skeleton-text {
+  margin-bottom: 5px;
+  border-radius: 3px;
+}
+
+.last-child {
+  margin-bottom: 0px !important;
+  width: 80%;
+}
+
+.h-36px {
+  height: 2.25rem;
+}
+
+.h-20px {
+  height: 1.2rem;
+}
+
+.line-clamp-1,
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.line-clamp-1 {
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  -webkit-line-clamp: 2;
+}
