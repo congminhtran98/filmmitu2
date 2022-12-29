@@ -20,20 +20,18 @@ const ProfileScreen = () => {
           <div className="profileScreen_info">
             <img
               alt="avatar"
-              src={user.photoURL ? user?.photoURL : '/user-non-avatar.png'}
+              src={
+                user?.profilePictureUrl
+                  ? user?.profilePictureUrl
+                  : '/user-non-avatar.png'
+              }
             />
             <div className="profileScreen_details">
-              <h1>Gmail:</h1>
-              <h2>{user.email}</h2>
-              <h1>Tên tài khoản: {user.name ? user?.name : 'default'}</h1>
-
-              <img
-                alt="avatar"
-                // src={user.photoURL ? user?.photoURL : '/user-non-avatar.png'}
-                src={user?.profilePictureUrl}
-              />
-
-              <h1>{user.name ? user?.name : 'default'}</h1>
+              <h1>Email:</h1>
+              <h2>{user?.email ? user?.email : 'No Information'}</h2>
+              <h1>
+                Tên tài khoản: {user?.name ? user?.name : 'No Information'}
+              </h1>
             </div>
           </div>
         </div>

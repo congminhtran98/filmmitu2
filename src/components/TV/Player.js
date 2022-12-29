@@ -5,7 +5,7 @@ import 'plyr/dist/plyr.css';
 
 // import video1 from '../../videos/Video1.mp4';
 // import video2 from '../../videos/Video2.mp4'
-import './Player.css';
+import './player.css';
 
 class Player extends React.Component {
   componentDidMount() {

@@ -119,7 +119,8 @@ const Navside = () => {
                 />
               ) : (
                 <FaSignInAlt
-                  className="nav-link-icon" style={{color:"green"}}
+                  className="nav-link-icon"
+                  style={{ color: 'green' }}
                   onClick={() => loginWithRedirect()}
                 />
               )}

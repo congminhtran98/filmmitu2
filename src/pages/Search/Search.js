@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Title from '../../components/Shared/Tittle';
+import Title from '../../components/shared/Tittle';
 import Tippy from '@tippyjs/react/headless';
 import ListResults from '../../components/Result/ListResults';
 import { API_KEY, BASE_URL } from '../../utils/constans';

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { API_KEY, BASE_URL } from "../../utils/constans";
-import "./Trailer.css";
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { API_KEY, BASE_URL } from '../../utils/constans';
+import './trailer.css';
 
 function ModalTrailer({ show, setShow }) {
   const params = useParams();
@@ -28,7 +28,7 @@ function ModalTrailer({ show, setShow }) {
   return (
     <div
       className="overlay"
-      style={{ display: show ? "flex" : "none" }}
+      style={{ display: show ? 'flex' : 'none' }}
       onClick={() => setShow(false)}
     >
       <div className="trailer-container" onClick={(e) => e.stopPropagation()}>
@@ -51,7 +51,7 @@ function ModalTrailer({ show, setShow }) {
                 <h1 className="trailer-name">{trailer.name}</h1>
                 <iframe
                   style={{
-                    height: "315px",
+                    height: '315px',
                   }}
                   width="100%"
                   src={`https://www.youtube.com/embed/${trailer.key}`}

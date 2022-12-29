@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { API_KEY, BASE_URL } from '../../utils/constans';
 import MovieItem from '../../components/Movie/MovieItem';
 import Skeleton from '../../components/Skeleton/Skeleton';
-import Title from '../../components/Shared/Tittle';
+import Title from '../../components/shared/Tittle';
 import './ViewMorePage.css';
 import 'boxicons';
 import Navside from '../../components/Nav/NavSide';

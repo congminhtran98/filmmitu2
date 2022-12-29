@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { API_KEY, BASE_URL } from '../../utils/constans';
-import ImageFade from '../Shared/ImgFade';
+import ImageFade from '../shared/ImgFade';
 
 function SimularColumn() {
   const params = useParams();

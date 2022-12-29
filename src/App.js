@@ -5,8 +5,8 @@ import HomeScreen from './pages/Home/HomeScreen';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import ProfileScreen from './pages/Profile/ProfileScreen';
 import Loading from './components/Loading/Loading';
-import { useAuth, useLoginWithRedirect } from '@frontegg/react';
-import Watchplayer from './components/TV/Watchplayer';
+import { useAuth, useTenantsState, useAuthActions } from '@frontegg/react';
+import Watchplayer from './components/tv/Watchplayer';
 import { fetchMovieFavorite } from './actions/fireStoreActions';
 import FavoriteList from './pages/FavoriteList/FavoriteList';
 import { onAuthStateChanged } from 'firebase/auth';
@@ -20,10 +20,10 @@ import Search from './pages/Search/Search';
 import SearchResults from './pages/Search/SearchResults';
 import WatchTv from './pages/Watch/Watch';
 import WatchMovie from './pages/Watch/WatchMovie';
-import Player from './components/TV/Player';
+import Player from './components/tv/Player';
 import Navside from './components/Nav/NavSide';
 import ViewMorePage from './pages/ViewMore/ViewMorePage';
-import PrivateRoute from './components/Shared/PrivateRoute.js';
+import PrivateRoute from './components/shared/PrivateRoute.js';
 import MovieScreen from './pages/Home/Movie/MovieScreen';
 import TVScreen from './pages/Home/TV/TVScreen.js';
 import AboutUs from './pages/About/About';
@@ -33,7 +33,6 @@ function App() {
   // const { setUser, user } = useStore((state) => state);
   const location = useLocation();
   const { user, isAuthenticated } = useAuth();
-  const loginWithRedirect = useLoginWithRedirect();
 
   const { setFavoriteList } = useStore((state) => state);
 
