@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageFade from '../shared/ImgFade';
+import ImageFade from '../Shared/ImgFade';
 import './MovieItem.css';
 import { useState } from 'react';
 

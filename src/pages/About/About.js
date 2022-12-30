@@ -1,7 +1,7 @@
 import React from 'react';
 import './About.css';
 import NavSide from '../../components/Nav/NavSide';
-import Title from '../../components/shared/Tittle.js';
+import Title from '../../components/Shared/Tittle.js';
 
 function AboutUs() {
   return (

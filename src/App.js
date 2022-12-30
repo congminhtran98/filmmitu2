@@ -6,9 +6,9 @@ import { fetchMovieFavorite } from './actions/fireStoreActions';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useStore } from './stored';
 
-import PrivateRoute from './components/shared/PrivateRoute.js';
+import PrivateRoute from './components/Shared/PrivateRoute.js';
 import Loading from './components/Loading/Loading';
-import Watchplayer from './components/tv/Watchplayer';
+import Watchplayer from './components/TV/Watchplayer';
 
 //pages
 import HomeScreen from './pages/Home/HomeScreen';
@@ -18,7 +18,7 @@ import Search from './pages/Search/Search';
 import SearchResults from './pages/Search/SearchResults';
 import WatchTv from './pages/Watch/Watch';
 import WatchMovie from './pages/Watch/WatchMovie';
-import Player from './components/tv/Player';
+import Player from './components/TV/Player';
 import Navside from './components/Nav/NavSide';
 import ViewMorePage from './pages/ViewMore/ViewMorePage';
 import MovieScreen from './pages/Home/Movie/MovieScreen';

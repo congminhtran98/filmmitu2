@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageFade from '../shared/ImgFade';
+import ImageFade from '../Shared/ImgFade';
 
 function CastItem({ data }) {
   const { name, character, profile_path } = data;

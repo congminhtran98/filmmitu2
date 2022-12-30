@@ -2,7 +2,7 @@ import React from 'react';
 import './ProfileScreen.css';
 import Navside from '../../components/Nav/NavSide';
 import Footer from '../../components/Footer/Footer';
-import Title from '../../components/shared/Tittle';
+import Title from '../../components/Shared/Tittle';
 // import { auth } from '../Library/firebase';
 
 import { useAuth } from '@frontegg/react';

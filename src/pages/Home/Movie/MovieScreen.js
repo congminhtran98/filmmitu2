@@ -3,7 +3,7 @@ import '../HomeScreen.css';
 import Navside from '../../../components/Nav/NavSide';
 import Footer from '../../../components/Footer/Footer';
 import SliderMovie from '../../../components/Slider/SliderMovie';
-import Title from '../../../components/shared/Tittle';
+import Title from '../../../components/Shared/Tittle';
 
 const MovieScreen = () => {
   return (

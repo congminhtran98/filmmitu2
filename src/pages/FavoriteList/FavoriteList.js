@@ -5,7 +5,7 @@ import MovieItem from '../../components/Movie/MovieItem';
 import Loading from '../../components/Loading/Loading';
 import { useStore } from '../../stored';
 import { useAuth } from '@frontegg/react';
-import Title from '../../components/shared/Tittle';
+import Title from '../../components/Shared/Tittle';
 import './Favorite.css';
 
 const FavoriteList = () => {

@@ -16,7 +16,7 @@ import StarRatings from 'react-star-ratings';
 import Navside from '../../components/Nav/NavSide';
 import Footer from '../../components/Footer/Footer';
 import { AiOutlineHeart } from 'react-icons/ai';
-import Title from '../../components/shared/Tittle.js';
+import Title from '../../components/Shared/Tittle.js';
 import './Details.css';
 
 function DetailsMovie() {

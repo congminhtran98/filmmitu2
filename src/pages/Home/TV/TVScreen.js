@@ -3,7 +3,7 @@ import '../HomeScreen.css';
 import Navside from '../../../components/Nav/NavSide';
 import Footer from '../../../components/Footer/Footer';
 import SliderTv from '../../../components/Slider/SliderTv';
-import Title from '../../../components/shared/Tittle';
+import Title from '../../../components/Shared/Tittle';
 
 const TVScreen = () => {
   return (
