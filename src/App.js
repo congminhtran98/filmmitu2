@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
 import './styles/App.css';
 import { Route, Routes, useLocation } from 'react-router-dom';
-import { useAuth, useTenantsState, useAuthActions } from '@frontegg/react';
-import { fetchMovieFavorite } from './actions/fireStoreActions';
-import { onAuthStateChanged } from 'firebase/auth';
-import { useStore } from './stored';
+import { useAuth } from '@frontegg/react';
+// import { fetchMovieFavorite } from './actions/fireStoreActions';
+// import { onAuthStateChanged } from 'firebase/auth';
 
 import PrivateRoute from './components/Shared/PrivateRoute.js';
 import Loading from './components/Loading/Loading';
@@ -32,9 +31,9 @@ function App() {
   // đăng nhập r sẽ load về trang chủ
   // const { setUser, user } = useStore((state) => state);
   const location = useLocation();
-  const { user, isAuthenticated } = useAuth();
+  const { user } = useAuth();
 
-  const { setFavoriteList } = useStore((state) => state);
+  // const { setFavoriteList } = useStore((state) => state);
 
   // useEffect(() => {
   //   const unsub = onAuthStateChanged(isAuthenticated, async (user) => {
