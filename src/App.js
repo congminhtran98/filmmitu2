@@ -1,19 +1,17 @@
 import React, { useEffect } from 'react';
 import './styles/App.css';
-import HomeScreen from './pages/Home/HomeScreen';
-// eslint-disable-next-line no-unused-vars
 import { Route, Routes, useLocation } from 'react-router-dom';
-import ProfileScreen from './pages/Profile/ProfileScreen';
-import Loading from './components/Loading/Loading';
 import { useAuth, useTenantsState, useAuthActions } from '@frontegg/react';
-import Watchplayer from './components/tv/Watchplayer';
 import { fetchMovieFavorite } from './actions/fireStoreActions';
-import FavoriteList from './pages/FavoriteList/FavoriteList';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useStore } from './stored';
-import ErrorPage from './pages/404/404Page.js';
-//pages
 
+import PrivateRoute from './components/shared/PrivateRoute.js';
+import Loading from './components/Loading/Loading';
+import Watchplayer from './components/tv/Watchplayer';
+
+//pages
+import HomeScreen from './pages/Home/HomeScreen';
 import UserSetting from './pages/Profile/ProfileSetting';
 import DetailsMovie from './pages/Details/Details';
 import Search from './pages/Search/Search';
@@ -23,10 +21,12 @@ import WatchMovie from './pages/Watch/WatchMovie';
 import Player from './components/tv/Player';
 import Navside from './components/Nav/NavSide';
 import ViewMorePage from './pages/ViewMore/ViewMorePage';
-import PrivateRoute from './components/shared/PrivateRoute.js';
 import MovieScreen from './pages/Home/Movie/MovieScreen';
 import TVScreen from './pages/Home/TV/TVScreen.js';
 import AboutUs from './pages/About/About';
+import ErrorPage from './pages/404/404Page.js';
+import FavoriteList from './pages/FavoriteList/FavoriteList';
+import ProfileScreen from './pages/Profile/ProfileScreen';
 
 function App() {
   // đăng nhập r sẽ load về trang chủ

@@ -1,0 +1,17 @@
+.genre-body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10%;
+    margin-top: 2rem;
+}
+.genre-left{
+    display: flex;
+    gap: 0.5rem;
+}
+.genre-left li{
+    align-items: center;
+}
+.genre-right{
+    align-items: center;
+}

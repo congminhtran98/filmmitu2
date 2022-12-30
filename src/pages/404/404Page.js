@@ -6,8 +6,7 @@ import './404.css';
 const ErrorPage = () => {
   return (
     <>
-      <Title title={'Something went wrong!'} />
-
+      <Title title={'SOS SOS SOS!!!!'} />
       <div className="error">
         <div className="error-body container">
           <h1 className="error-title">404</h1>

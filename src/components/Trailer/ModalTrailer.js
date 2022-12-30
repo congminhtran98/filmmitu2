@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { API_KEY, BASE_URL } from '../../utils/constans';
-import './trailer.css';
+import './Trailer.css';
 
 function ModalTrailer({ show, setShow }) {
   const params = useParams();
@@ -33,7 +33,7 @@ function ModalTrailer({ show, setShow }) {
     >
       <div className="trailer-container" onClick={(e) => e.stopPropagation()}>
         <div className="trailer-title-close">
-          <h1 className="trailer-title">{media_type} trailers</h1>
+          <h1 className="trailer-title">{media_type} Trailers</h1>
           <box-icon
             onClick={() => setShow(false)}
             color="white"
@@ -44,7 +44,7 @@ function ModalTrailer({ show, setShow }) {
 
         <div className="trailer-content">
           {!trailers.lenth === 0 ? (
-            <h1>Ko tìm thấy trailer</h1>
+            <h1>Không tìm thấy trailer</h1>
           ) : (
             trailers.map((trailer) => (
               <div key={trailer.id}>

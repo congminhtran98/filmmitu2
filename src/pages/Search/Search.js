@@ -55,7 +55,7 @@ function Search() {
       <div className="bodyside">
         <form onSubmit={onSubmitForm} className="search">
           {/* Change document title */}
-          <Title title={'Search movies and tv-shows'} />
+          <Title title={'Tìm kiếm phim ở đâyyy'} />
 
           <Tippy
             interactive

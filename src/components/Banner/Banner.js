@@ -29,7 +29,7 @@ const Banner = () => {
 
   return (
     <header className="banner">
-      <video src={videoBg} autoPlay muted playsinline loop />
+      <video src={videoBg} autoPlay muted playsInline loop />
       <div className="banner_contents">
         <h1 className="banner_title">
           {' '}

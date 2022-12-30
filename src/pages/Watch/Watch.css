@@ -20,6 +20,9 @@
 .simularMovie {
   width: 20%;
 }
+.simularMovieTV {
+  width: 100%;
+}
 
 .movie-name {
   color: #fff;

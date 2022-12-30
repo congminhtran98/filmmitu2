@@ -63,7 +63,7 @@ function ViewMorePage() {
       <Navside />
       {/* Change document title */}
       <div className="bodyside">
-        <Title title={`${media_type.toUpperCase()} | ${type.toUpperCase()}`} />
+        <Title title={`${media_type} | ${type}`} />
 
         <div className="view_more">
           <h1 className="view_more-title">

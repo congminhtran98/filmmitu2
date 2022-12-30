@@ -16,13 +16,13 @@ import StarRatings from 'react-star-ratings';
 import Navside from '../../components/Nav/NavSide';
 import Footer from '../../components/Footer/Footer';
 import { AiOutlineHeart } from 'react-icons/ai';
+import Title from '../../components/shared/Tittle.js';
 import './Details.css';
 
 function DetailsMovie() {
   // const param = useParams();
   // const { media_type, id } = param;
   let { media_type, id } = useParams();
-  console.log(media_type, id);
   const [data, setData] = useState({});
   const [showModal, setShowModal] = useState(false);
   const { user, favoriteList, setFavoriteList } = useStore((state) => state);
@@ -80,6 +80,7 @@ function DetailsMovie() {
   return (
     <div>
       <Navside />
+      <Title title={'Thông tin phim/series'} />
       <div className="bodyside">
         <div
           className={`details ${loading ? 'skeleton' : ''}`}
@@ -180,7 +181,7 @@ function DetailsMovie() {
 
         <div className="container">
           <p className="homepage">
-            Trang giới thiệu phim: {' '}
+            Trang giới thiệu phim:{' '}
             <a
               target="_blank"
               rel="noreferrer"

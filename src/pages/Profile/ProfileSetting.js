@@ -4,6 +4,7 @@ import './ProfileSetting.css';
 import Navside from '../../components/Nav/NavSide';
 import Footer from '../../components/Footer/Footer';
 import { useStore } from '../../stored';
+import Title from '../../components/shared/Tittle';
 
 // import { auth } from '../Library/firebase';
 
@@ -15,6 +16,7 @@ const UserSetting = () => {
     <div className="profileScreen">
       <Navside />
       <div className="bodyside">
+        <Title title={`Quản lí hồ sơ`} />
         <div className="profileScreen_body">
           <p>
             <label>Quản lí tài khoản</label> thành viên từ tháng 12/2022

@@ -34,7 +34,7 @@ const FavoriteList = () => {
 
   return (
     <div className="favorite">
-      <Title title={'My favorite movie'} />
+      <Title title={'Danh mục ưa thích'} />
       <div className="container">
         <h1 className="favorite-title">Favorite Movie</h1>
 

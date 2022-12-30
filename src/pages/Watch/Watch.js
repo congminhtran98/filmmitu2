@@ -91,7 +91,7 @@ function Watch() {
             })}
           </div>
         </div>
-        <div className="simularMovie">
+        <div className="simularMovieTV">
           <Simular />
         </div>
         <Footer />

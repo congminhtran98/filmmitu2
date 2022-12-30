@@ -56,7 +56,10 @@ const Navside = () => {
 
           <li className="nav-item">
             <div className="nav-link">
-              <MdOutlineMovieFilter className="nav-link-icon" />
+              <MdOutlineMovieFilter
+                className="nav-link-icon"
+                onClick={() => history('/moviescreen')}
+              />
               <span
                 className="link-text"
                 onClick={() => history('/moviescreen')}
@@ -68,7 +71,10 @@ const Navside = () => {
 
           <li className="nav-item">
             <div className="nav-link">
-              <RiMovie2Line className="nav-link-icon" />
+              <RiMovie2Line
+                className="nav-link-icon"
+                onClick={() => history('/tvscreen')}
+              />
               <span className="link-text" onClick={() => history('/tvscreen')}>
                 TV series
               </span>

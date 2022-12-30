@@ -2,6 +2,7 @@ import React from 'react';
 import './ProfileScreen.css';
 import Navside from '../../components/Nav/NavSide';
 import Footer from '../../components/Footer/Footer';
+import Title from '../../components/shared/Tittle';
 // import { auth } from '../Library/firebase';
 
 import { useAuth } from '@frontegg/react';
@@ -15,6 +16,7 @@ const ProfileScreen = () => {
     <div className="profileScreen">
       <Navside />
       <div className="bodyside">
+        <Title title={`Hồ sơ cá nhân`} />
         <div className="profileScreen_body">
           <h1>Hồ sơ cá nhân </h1>
           <div className="profileScreen_info">
