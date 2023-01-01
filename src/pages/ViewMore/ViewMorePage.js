@@ -1,11 +1,14 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import 'boxicons';
+
+import './ViewMorePage.css';
+
 import { API_KEY, BASE_URL } from '../../utils/constans';
+
 import MovieItem from '../../components/Movie/MovieItem';
 import Skeleton from '../../components/Skeleton/Skeleton';
 import Title from '../../components/Shared/Tittle';
-import './ViewMorePage.css';
-import 'boxicons';
 import Navside from '../../components/Nav/NavSide';
 
 function ViewMorePage() {

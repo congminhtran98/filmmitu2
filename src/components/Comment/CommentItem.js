@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { useStore } from '../../stored';
+
 import { calculateCreatedTime } from '../../utils/constans';
 import Reaction from '../Reaction/Reaction';
 import ShowReaction from '../Reaction/ShowReaction';
 import InputReply from './InputReply';
 import ReplyCommentList from './ReplyCommentList';
-import { useAuth } from '@frontegg/react';
 
 const CommentItem = ({ item, movieId, listComment }) => {
   const [showReaction, setShowReaction] = useState(false);
@@ -12,7 +13,7 @@ const CommentItem = ({ item, movieId, listComment }) => {
   const [countReply, setCountReply] = useState(0);
   const [showReply, setShowReply] = useState(false);
   const [showReplyItem, setShowReplyItem] = useState(false);
-  const { user } = useAuth();
+  const { user } = useStore((state) => state);
 
   useEffect(() => {
     let count = 0;
@@ -30,7 +31,7 @@ const CommentItem = ({ item, movieId, listComment }) => {
     }
 
     const reactionApi = item?.reactions.find(
-      (item) => item.userId === user?.sid
+      (item) => item.userId === user?.uid
     );
     if (!reactionApi) return setReaction(null);
     if (reactionApi) {

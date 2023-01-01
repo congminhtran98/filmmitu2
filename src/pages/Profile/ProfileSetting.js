@@ -1,11 +1,12 @@
 import React from 'react';
+
 import './ProfileSetting.css';
+
+import { useStore } from '../../stored';
 
 import Navside from '../../components/Nav/NavSide';
 import Footer from '../../components/Footer/Footer';
-import { useStore } from '../../stored';
 import Title from '../../components/Shared/Tittle';
-
 // import { auth } from '../Library/firebase';
 
 const UserSetting = () => {

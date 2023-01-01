@@ -1,18 +1,16 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useEffect, useState } from 'react';
 import SwiperCore, { Navigation } from 'swiper';
+import { Link, useParams } from 'react-router-dom';
+
 import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
-
-import { useEffect, useState } from 'react';
-
-import useInnerWidth from '../../hooks/useInnerWidth';
-import Skeleton from '../Skeleton/Skeleton';
-
 import './Simular.css';
 
 import { API_KEY, BASE_URL } from '../../utils/constans';
-import { Link, useParams } from 'react-router-dom';
+import useInnerWidth from '../../hooks/useInnerWidth';
+import Skeleton from '../Skeleton/Skeleton';
 import MovieItem from '../Movie/MovieItem';
 
 const Simular = () => {

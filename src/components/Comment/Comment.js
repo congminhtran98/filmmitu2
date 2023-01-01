@@ -1,15 +1,17 @@
 import React, { useMemo, useState } from 'react';
-import './Comment.css';
 import 'boxicons';
+import { useStore } from '../../stored';
+
+import './Comment.css';
+
 import { postComment } from '../../actions/fireStoreActions';
 import Input from './Input';
 import CommentItem from './CommentItem';
 import useFireStore from '../../hooks/useFireStore';
-import { useAuth } from '@frontegg/react';
 
 const Comment = ({ movieId }) => {
   // const user = useStore((state) => state.user);
-  const { user } = useAuth();
+  const user = useStore((state) => state.user);
   const [comment, setComment] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -21,9 +23,9 @@ const Comment = ({ movieId }) => {
     postComment({
       responseTo: null,
       movieId: movieId,
-      userId: user.sid, //user.uid,
-      userName: user?.name, //user.displayName ? user.displayName : user.email,
-      avatar: user?.profilePictureUrl, //user.photoURL ? user.photoURL : '/user-non-avatar.png',
+      userId: user.uid,
+      userName: user.displayName ? user.displayName : user.email,
+      avatar: user.photoURL ? user.photoURL : '/user-non-avatar.png',
       content: comment,
       reactions: [],
       created_at: Date.now(),

@@ -1,7 +1,9 @@
 import React from 'react';
-import ImageFade from '../Shared/ImgFade';
-import './MovieItem.css';
 import { useState } from 'react';
+
+import './MovieItem.css';
+
+import ImageFade from '../Shared/ImgFade';
 
 function MovieItem({ data }) {
   const { poster_path } = data;

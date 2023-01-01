@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../Header/Nav.css';
-import { AiFillCaretDown } from 'react-icons/ai';
 import { Auth } from '../../config/firebase';
+
+import '../Header/Nav.css';
+
+import { AiFillCaretDown } from 'react-icons/ai';
 import logo from '../../images/logo.png';
-import { useAuth, useLoginWithRedirect, ContextHolder } from '@frontegg/react';
-import { AdminPortal } from '@frontegg/react';
 
 import { useStore } from '../../stored';
 
@@ -22,11 +22,6 @@ const Nav = () => {
     } else {
       handleShow(false);
     }
-  };
-
-  const logout = () => {
-    const baseUrl = ContextHolder.getContext().baseUrl;
-    window.location.href = `${baseUrl}/oauth/logout?post_logout_redirect_uri=${window.location}`;
   };
 
   useEffect(() => {
@@ -67,9 +62,7 @@ const Nav = () => {
               <li onClick={() => history('/profile')}>Hồ sơ cá nhân</li>
               <li onClick={() => history('/usersetting')}>Quản lí tài khoản</li>
               <li onClick={() => history('/profile')}>Trung tâm hỗ trợ</li>
-              <li onClick={() => logout()} className="profileScreen_signOut">
-                Đăng xuất
-              </li>
+              <li className="profileScreen_signOut">Đăng xuất</li>
             </ul>
           )}
           <AiFillCaretDown

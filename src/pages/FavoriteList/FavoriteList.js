@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Favorite.css';
 import { deleteFavoriteMovie } from '../../actions/fireStoreActions';
+import { useStore } from '../../stored';
 import MovieItem from '../../components/Movie/MovieItem';
 import Loading from '../../components/Loading/Loading';
-import { useStore } from '../../stored';
-import { useAuth } from '@frontegg/react';
 import Title from '../../components/Shared/Tittle';
-import './Favorite.css';
 
 const FavoriteList = () => {
-  const { favoriteList, setFavoriteList } = useStore((state) => state);
-  const { user } = useAuth();
+  const { user, favoriteList, setFavoriteList } = useStore((state) => state);
 
   const [loading, setLoading] = useState(false);
 
@@ -38,7 +36,7 @@ const FavoriteList = () => {
       <div className="container">
         <h1 className="favorite-title">Favorite Movie</h1>
 
-        {this.state.favoriteList !== undefined ? (
+        {favoriteList.length > 0 ? (
           <div className="grid-layout grid-gap-1rem-1rem">
             {favoriteList &&
               favoriteList.map((item) => (

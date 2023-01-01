@@ -11,9 +11,9 @@ const InputReply = ({ user, commentParentId, movieId, setShowReply }) => {
     const newReply = {
       responseTo: commentParentId,
       movieId: movieId,
-      userId: user.accessToken,
-      userName: user.name,
-      avatar: user.profilePictureUrl,
+      userId: user.uid,
+      userName: user.displayName,
+      avatar: user.photoURL,
       content: comment,
       reactions: [],
       created_at: Date.now(),
@@ -25,7 +25,7 @@ const InputReply = ({ user, commentParentId, movieId, setShowReply }) => {
 
   return (
     <div style={{ display: 'flex', alignItems: 'center' }}>
-      <img className="avatar" alt="avatar" src={user.profilePictureUrl} />
+      <img className="avatar" alt="avatar" src={user.photoURL} />
 
       <div className="comment-control" style={{ marginTop: '20px' }}>
         <input

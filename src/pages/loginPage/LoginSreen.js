@@ -1,21 +1,29 @@
 import React from 'react';
-import './loginScreen.css';
 import { useState } from 'react';
-import SignInScreen from '../../components/loginForm/signInScreen';
-import Footer from '../../components/footer/footer';
+
+import './LoginScreen.css';
+
+import SignInScreen from '../../components/LoginForm/SignInScreen';
+import Footer from '../../components/Footer/Footer';
 import PC from '../../images/loginScreen_cardInfo_PC.webp';
 import Down from '../../images/loginScreen_cardInfo_down.jpg';
 import Money from '../../images/loginScreen_cardInfo_money.webp';
 import logo from '../../images/logo.png';
+import { useStore } from '../../stored';
+import { useSearchParams } from '../../hooks/useSearchParams';
+import { Navigate } from 'react-router-dom';
 
 const LoginScreen = () => {
   const [signIn, setSignIn] = useState(false);
+  const { user, loading } = useStore((state) => state);
+  const searchParams = useSearchParams();
+  if (user) return <Navigate to={searchParams.get('redirect') || '/'} />;
 
   return (
     <div>
       <div className="loginScreen">
         <div className="loginScreen_background">
-          <img className="loginScreen_logo" src={logo} alt="" ></img>
+          <img className="loginScreen_logo" src={logo} alt=""></img>
           <button
             onClick={() => {
               setSignIn(true);
@@ -34,7 +42,7 @@ const LoginScreen = () => {
             <SignInScreen />
           ) : (
             <>
-              <div className='loginScreen_detail'>
+              <div className="loginScreen_detail">
                 <h1>
                   Chương trình truyền hình, phim không giới hạn và nhiều nội
                   dung khác.

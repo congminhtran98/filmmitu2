@@ -6,6 +6,7 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@frontegg/react": "^5.0.16",
+    "@hookform/resolvers": "^2.9.10",
     "@mui/icons-material": "^5.10.16",
     "@mui/material": "^5.10.16",
     "@mui/styled-engine-sc": "^5.10.16",
@@ -25,6 +26,7 @@
     "react-cssfx-loading": "^2.1.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
+    "react-lazy-load-image-component": "^1.5.6",
     "react-redux": "^8.0.5",
     "react-router": "^6.5.0",
     "react-router-dom": "^6.6.1",
@@ -36,6 +38,7 @@
     "styled-components": "^5.3.6",
     "swiper": "^8.4.5",
     "web-vitals": "^2.1.4",
+    "yup": "^0.32.11",
     "zustand": "^4.1.5"
   },
   "scripts": {

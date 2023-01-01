@@ -1,5 +1,7 @@
 import React from 'react';
+
 import '../HomeScreen.css';
+
 import Navside from '../../../components/Nav/NavSide';
 import Footer from '../../../components/Footer/Footer';
 import SliderMovie from '../../../components/Slider/SliderMovie';
@@ -12,10 +14,10 @@ const MovieScreen = () => {
       <div className="bodyside container">
         <Title title={`Phim lẻ`} />
         <div className="movie">
-          <SliderMovie type="trending" />
-          <SliderMovie type="popular" />
-          <SliderMovie type="top_rated" />
-        </div>
+        <SliderMovie type="trending" />
+        <SliderMovie type="popular" />
+        <SliderMovie type="top_rated" />
+      </div>
         <Footer />
       </div>
     </div>

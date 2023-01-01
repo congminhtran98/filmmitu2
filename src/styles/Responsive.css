@@ -47,6 +47,12 @@
   .banner {
     display: none;
   }
+  .profileScreen_body h1 {
+    font-size: 2rem;
+  }
+  .profileScreen_details h1 {
+    font-size: 1rem;
+  }
 
   /* loginScreen responsive */
   .loginScreen {

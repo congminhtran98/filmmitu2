@@ -1,12 +1,13 @@
 import React, { useRef, useState } from 'react';
-import { createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
-import './signInScreen.css';
-
+import { Link } from 'react-router-dom';
+import { signInWithPopup } from 'firebase/auth';
 import { Auth } from '../../config/firebase';
 import { auth, googleProvider } from '../../config/firebase';
 import { addUser } from '../../actions/fireStoreActions';
 import { useStore } from '../../stored';
-import { Link } from 'react-router-dom';
+
+import './SignInScreen.css';
+
 import SignUpScreen from './SignUpScreen';
 
 const SignInScreen = () => {
@@ -21,8 +22,8 @@ const SignInScreen = () => {
       emailRef.current.value,
       passwordRef.current.value
     )
-      .then((authUser) => {
-        console.log(authUser);
+      .then((AuthUser) => {
+        console.log(AuthUser);
       })
       .catch((error) => {
         alert(error.message);
@@ -56,7 +57,7 @@ const SignInScreen = () => {
             placeholder="Password"
             type="password"
           ></input>
-          <button type="submit" onClick={signIn}>
+          <button type="submit" onClick={signIn} disabled={loading}>
             Đăng nhập
           </button>
 
@@ -64,13 +65,13 @@ const SignInScreen = () => {
             <span className="signInScreen_gray">
               Bạn mới tham gia Netflix?{' '}
             </span>
-            <button
+            <Link
               onClick={() => {
                 setSignUp(true);
               }}
             >
               <span className="singInScreen_singup">Đăng ký ngay</span>
-            </button>
+            </Link>
           </h5>
 
           <button

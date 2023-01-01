@@ -1,8 +1,10 @@
-import axios from '../../library/axios';
 import React, { useEffect, useState } from 'react';
-import './Banner.css';
-import requests from '../../library/requests';
 import { useNavigate } from 'react-router-dom';
+import axios from '../../library/axios';
+import requests from '../../library/requests';
+
+import './Banner.css';
+
 import videoBg from '../../videos/WizardBattle.mp4';
 import { GoMute } from 'react-icons/go';
 import { ImLoop2 } from 'react-icons/im';
@@ -29,7 +31,7 @@ const Banner = () => {
 
   return (
     <header className="banner">
-      <video src={videoBg} autoPlay muted playsInline loop />
+      <video src={videoBg} autoPlay muted playsinline loop />
       <div className="banner_contents">
         <h1 className="banner_title">
           {' '}

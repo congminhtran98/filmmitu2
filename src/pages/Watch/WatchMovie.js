@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+
+import './Watch.css';
+
 import { API_KEY, BASE_URL } from '../../utils/constans';
+
 import SimularColumn from '../../components/Simular/SimularColumn';
 import Title from '../../components/Shared/Tittle';
 import Comment from '../../components/Comment/Comment';
@@ -8,7 +12,6 @@ import EmbedVideoMovie from '../../components/Movie/EmbedVideoMovie';
 import MovieInfo from '../../components/Movie/MovieInfo';
 import Navside from '../../components/Nav/NavSide';
 import Footer from '../../components/Footer/Footer';
-import './Watch.css';
 // import Player from '../../components/TV/Player';
 
 function WatchMovie() {

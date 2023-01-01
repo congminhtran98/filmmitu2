@@ -1,12 +1,13 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
+import { Link } from 'react-router-dom';
 
 import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
-import useInnerWidth from '../../hooks/useInnerWidth';
 import './Slider.css';
-import { Link } from 'react-router-dom';
+
+import useInnerWidth from '../../hooks/useInnerWidth';
 import MovieItem from '../Movie/MovieItem';
 
 const RecentlySlider = ({ data }) => {

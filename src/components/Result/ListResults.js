@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import './Result.css';
+
 import ResultItem from './ResultItem';
 import ResultSkeleton from './ResultSkeleton';
 

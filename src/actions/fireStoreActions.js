@@ -6,14 +6,16 @@ import {
   getDocs,
   deleteDoc,
   doc,
+  setDoc,
   Timestamp,
-  orderBy,
-} from "firebase/firestore";
-import { toast } from "react-toastify";
-import { db } from "../config/firebase";
+  onSnapshot,
+} from 'firebase/firestore';
+import { toast } from 'react-toastify';
+import { db } from '../config/firebase';
 
 export const addUser = async (user) => {
-  const userRef = await addDoc(collection(db, "User"), user);
+  const ref = doc(db, 'users', user.uid);
+  const userRef = await setDoc(ref, user);
   return userRef;
 };
 
@@ -30,7 +32,7 @@ export const addMovieFromPlaylist = async (uid, movie, media_type) => {
       create_at: Timestamp.fromDate(new Date(Date.now())),
     };
 
-    const res = await addDoc(collection(db, "favoriteMovie"), data);
+    const res = await addDoc(collection(db, 'favoriteMovie'), data);
 
     return { ...data, id: res.id };
   } catch (error) {
@@ -40,11 +42,7 @@ export const addMovieFromPlaylist = async (uid, movie, media_type) => {
 
 export const fetchMovieFavorite = async (uid) => {
   try {
-    const q = query(
-      collection(db, "favoriteMovie"),
-      where("uid", "==", uid),
-      orderBy("create_at")
-    );
+    const q = query(collection(db, 'favoriteMovie'), where('uid', '==', uid));
     const querySnapshot = await getDocs(q);
     const favoriteList = [];
     querySnapshot.forEach((doc) => {
@@ -67,7 +65,7 @@ export const deleteFavoriteMovie = async (data) => {
 
 export const postComment = async (newComment) => {
   try {
-    const res = await addDoc(collection(db, "comments"), newComment);
+    const res = await addDoc(collection(db, 'comments'), newComment);
 
     return {
       ...newComment,
@@ -80,7 +78,7 @@ export const postComment = async (newComment) => {
 
 export const fecthCommentFromApi = async (id) => {
   try {
-    const q = query(collection(db, "comments"), where("movieId", "==", id));
+    const q = query(collection(db, 'comments'), where('movieId', '==', id));
     const querySnapshot = await getDocs(q);
     const commentList = [];
     querySnapshot.forEach((doc) => {

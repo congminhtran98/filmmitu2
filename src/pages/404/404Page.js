@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Title from '../../components/Shared/Tittle.js';
+
 import './404.css';
+
+import Title from '../../components/Shared/Tittle.js';
 
 const ErrorPage = () => {
   return (

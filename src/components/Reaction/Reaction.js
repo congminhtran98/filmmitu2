@@ -3,20 +3,20 @@ import React from 'react';
 import { db } from '../../config/firebase';
 
 import reactionGif from '../../utils/reactionGif';
-import { useAuth } from '@frontegg/react';
+import { useStore } from '../../stored';
 
 const Reaction = ({ comment, setShowReaction, showReaction }) => {
-  const { user } = useAuth();
+  const { user } = useStore((state) => state);
 
   const handleReact = (type) => {
     const docRef = doc(db, `comments/${comment.id}`);
-    if (comment?.reactions?.some((item) => item.userId === user?.sid)) {
+    if (comment?.reactions?.some((item) => item.userId === user?.uid)) {
       const newReaction = comment.reactions.filter(
-        (item) => item.userId !== user?.sid
+        (item) => item.userId !== user?.uid
       );
 
       const reactUserType = comment?.reactions.find(
-        (item) => item.userId === user?.sid
+        (item) => item.userId === user?.uid
       ).type;
 
       if (type === reactUserType) {
@@ -28,11 +28,11 @@ const Reaction = ({ comment, setShowReaction, showReaction }) => {
       }
 
       updateDoc(docRef, {
-        reactions: [...newReaction, { userId: user?.sid, type: type }],
+        reactions: [...newReaction, { userId: user?.uid, type: type }],
       });
     } else {
       updateDoc(docRef, {
-        reactions: [...comment?.reactions, { userId: user?.sid, type: type }],
+        reactions: [...comment?.reactions, { userId: user?.uid, type: type }],
       });
     }
 
@@ -72,8 +72,8 @@ const Reaction = ({ comment, setShowReaction, showReaction }) => {
             src={item.image}
             alt={item.name}
           />
-          {comment?.reactions.some((item) => item.userId === user?.sid) &&
-            comment?.reactions.find((item) => item.userId === user?.sid)
+          {comment?.reactions.some((item) => item.userId === user?.uid) &&
+            comment?.reactions.find((item) => item.userId === user?.uid)
               .type === item.name && <span className="dotted-blue" />}
         </div>
       ))}

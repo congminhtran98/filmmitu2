@@ -1,9 +1,11 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import MovieItem from '../../components/Movie/MovieItem';
-import Skeleton from '../../components/Skeleton/Skeleton';
+
 import { useSearchParams } from '../../hooks/useSearchParams';
 import { BASE_URL, API_KEY } from '../../utils/constans';
+
+import MovieItem from '../../components/Movie/MovieItem';
+import Skeleton from '../../components/Skeleton/Skeleton';
 import Title from '../../components/Shared/Tittle';
 import Navside from '../../components/Nav/NavSide';
 

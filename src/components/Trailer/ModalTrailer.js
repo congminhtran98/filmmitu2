@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { API_KEY, BASE_URL } from '../../utils/constans';
+
 import './Trailer.css';
 
 function ModalTrailer({ show, setShow }) {

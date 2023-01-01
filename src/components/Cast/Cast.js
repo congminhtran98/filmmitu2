@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+
+import './Cast.css';
+
 import { API_KEY, BASE_URL } from '../../utils/constans';
 import CastItem from './CastItem';
-import './Cast.css';
 import Skeleton from '../Skeleton/Skeleton';
 
 function Cast() {

@@ -1,28 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { API_KEY, BASE_URL } from '../../utils/constans';
-import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import StarRatings from 'react-star-ratings';
+
+import './Details.css';
+
+import { API_KEY, BASE_URL } from '../../utils/constans';
+import { addMovieFromPlaylist } from '../../actions/fireStoreActions';
+import { addMovieLocal } from '../../utils/localStro';
+import { useStore } from '../../stored';
+
 import Cast from '../../components/Cast/Cast';
 import Simular from '../../components/Simular/Simular';
 import ModalTrailer from '../../components/Trailer/ModalTrailer';
-
-import { toast } from 'react-toastify';
-import { addMovieFromPlaylist } from '../../actions/fireStoreActions';
+import Button from '../../components/Button/Button';
 import Loading from '../../components/Loading/Loading';
-import { addMovieLocal } from '../../utils/localStro';
-import { useStore } from '../../stored';
-import StarRatings from 'react-star-ratings';
 import Navside from '../../components/Nav/NavSide';
 import Footer from '../../components/Footer/Footer';
-import { AiOutlineHeart } from 'react-icons/ai';
 import Title from '../../components/Shared/Tittle.js';
-import './Details.css';
+import { AiOutlineHeart } from 'react-icons/ai';
 
 function DetailsMovie() {
   // const param = useParams();
   // const { media_type, id } = param;
   let { media_type, id } = useParams();
+  console.log(media_type, id);
   const [data, setData] = useState({});
   const [showModal, setShowModal] = useState(false);
   const { user, favoriteList, setFavoriteList } = useStore((state) => state);
@@ -66,15 +69,15 @@ function DetailsMovie() {
       const movieExist = favoriteList.some((item) => item.movie.id === data.id);
 
       if (movieExist) {
-        return toast.error('Movies already exist');
+        return alert('Movies already exist');
       }
     }
 
     setLoadingAddMovie(true);
-    const newFavorite = await addMovieFromPlaylist(user.sid, data, media_type);
+    const newFavorite = await addMovieFromPlaylist(user.uid, data, media_type);
     setFavoriteList([...favoriteList, newFavorite]);
     setLoadingAddMovie(false);
-    toast.success('Add new favorite success !');
+    alert('Add new favorite success !');
   };
 
   return (
@@ -170,6 +173,7 @@ function DetailsMovie() {
                   <span
                     className="watch-link"
                     title="Thêm vào danh mục của tôi"
+                    onClick={handleAddToFavorites}
                   >
                     <AiOutlineHeart onClick={handleAddToFavorites} />
                   </span>

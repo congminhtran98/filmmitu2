@@ -1,6 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { auth } from '../../config/firebase';
+import { signOut } from 'firebase/auth';
 import './NavSide.css';
+import { useStore } from '../../stored';
+
 import logo from '../../images/logo.png';
 import { MdOutlineMovieFilter } from 'react-icons/md';
 import { RiMovie2Line } from 'react-icons/ri';
@@ -11,22 +16,13 @@ import { CgProfile } from 'react-icons/cg';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { FaSignOutAlt } from 'react-icons/fa';
 import { FaSignInAlt } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import { useAuth, useLoginWithRedirect, ContextHolder } from '@frontegg/react';
-import { AdminPortal } from '@frontegg/react';
-
-const logout = () => {
-  const baseUrl = ContextHolder.getContext().baseUrl;
-  window.location.href = `${baseUrl}/oauth/logout?post_logout_redirect_uri=${window.location}`;
-};
-
-const handleClick = () => {
-  AdminPortal.show();
-};
 
 const Navside = () => {
-  const { user, isAuthenticated } = useAuth();
-  const loginWithRedirect = useLoginWithRedirect();
+  const user = useStore((state) => state.user);
+  const logOut = () => {
+    signOut(auth);
+  };
+
   const history = useNavigate();
 
   return (
@@ -92,8 +88,16 @@ const Navside = () => {
 
           <li className="nav-item">
             <div className="nav-link">
-              <AiOutlineHeart className="nav-link-icon" />
-              <span className="link-text">Danh mục yêu thích</span>
+              <AiOutlineHeart
+                onClick={() => history('/favorite-movie')}
+                className="nav-link-icon"
+              />
+              <span
+                className="link-text"
+                onClick={() => history('/favorite-movie')}
+              >
+                Danh mục yêu thích
+              </span>
             </div>
           </li>
 
@@ -110,41 +114,47 @@ const Navside = () => {
           </li>
           <li className="nav-item">
             <div className="nav-link">
-              <CgProfile className="nav-link-icon" onClick={handleClick} />
-              <span className="link-text" onClick={handleClick}>
-                Quản lí hồ sơ
+              <CgProfile
+                className="nav-link-icon"
+                onClick={() => history('/changePassword')}
+              />
+              <span
+                className="link-text"
+                onClick={() => history('/changePassword')}
+              >
+                đổi mật khẩu
               </span>
             </div>
           </li>
           <li className="nav-item">
             <div className="nav-link" id="hide">
-              {isAuthenticated ? (
+              {user ? (
                 <FaSignOutAlt
                   className="nav-link-icon"
-                  onClick={() => logout()}
+                  onClick={() => logOut()}
                 />
               ) : (
                 <FaSignInAlt
                   className="nav-link-icon"
                   style={{ color: 'green' }}
-                  onClick={() => loginWithRedirect()}
+                  onClick={() => history('/signIn')}
                 />
               )}
             </div>
           </li>
           <li className="nav-item">
             <div className="nav-link">
-              {isAuthenticated ? (
+              {user ? (
                 <span
                   className="link-text profileScreen_signOut"
-                  onClick={() => logout()}
+                  onClick={() => logOut()}
                 >
                   Đăng xuất
                 </span>
               ) : (
                 <span
                   className="link-text profileScreen_signOut"
-                  onClick={() => loginWithRedirect()}
+                  onClick={() => history('/signIn')}
                 >
                   Đăng nhập
                 </span>
