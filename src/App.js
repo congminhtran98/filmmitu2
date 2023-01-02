@@ -29,6 +29,7 @@ import ProfileScreen from './pages/Profile/ProfileScreen';
 import LoginScreen from './pages/loginPage/LoginSreen';
 import ChangePassword from './pages/Profile/ChangePassword';
 import ForgotPassword from './pages/loginPage/ForgotPassword';
+import WatchTrailer from './components/TV/WatchTrailer';
 
 function App() {
   // đăng nhập r sẽ load về trang chủ
@@ -119,6 +120,7 @@ function App() {
         <Route path="/signIn" element={<LoginScreen />}></Route>
         <Route path="/changePassword" element={<ChangePassword />}></Route>
         <Route path="/forgotPassword" element={<ForgotPassword />}></Route>
+        <Route path="/watchTrailer" element={<WatchTrailer />}></Route>
 
         <Route
           path="/favorite-movie"

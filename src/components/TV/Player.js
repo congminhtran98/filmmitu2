@@ -70,8 +70,8 @@ Player.defaultProps = {
     type: 'video',
     sources: [
       {
-        src: 'https://cdn.glitch.me/cbf2cfb4-aa52-4a1f-a73c-461eef3d38e8/1080.mp4',
-        // src: video2,
+        // src: 'https://cdn.glitch.me/cbf2cfb4-aa52-4a1f-a73c-461eef3d38e8/1080.mp4',
+        src: 'https://www.youtube.com/watch?v=oijDWW1CMt0',
         type: 'video/mp4',
         size: 720,
       },
