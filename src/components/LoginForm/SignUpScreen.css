@@ -1,0 +1,20 @@
+.signUpScreen input {
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+}
+
+.signUpScreen button {
+    margin-top: 3rem;
+    padding: 1rem;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+.signUpScreen button:hover {
+    color: red;
+    background-color: white;
+    transition: 0.3s;
+}

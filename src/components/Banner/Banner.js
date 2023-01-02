@@ -14,7 +14,6 @@ const Banner = () => {
   const history = useNavigate();
   const [isShown, setIsShown] = useState(false);
   const [movie, setMovie] = useState([]);
-  const [show, setShow] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -40,10 +39,9 @@ const Banner = () => {
         </h1>
         <div className="banner_buttons">
           <div className="banner_button_left">
-            <Link className="banner_button" to={`/watchTrailer`}>
+            <Link className="banner_button" to={`/watchplayer`}>
               Trailer
             </Link>
-
             <Link className="banner_button" to={`/watchplayer`}>
               Xem phim
             </Link>

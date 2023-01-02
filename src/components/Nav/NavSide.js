@@ -122,7 +122,7 @@ const Navside = () => {
                 className="link-text"
                 onClick={() => history('/changePassword')}
               >
-                đổi mật khẩu
+                Đổi mật khẩu
               </span>
             </div>
           </li>

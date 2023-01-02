@@ -7,6 +7,7 @@ import {
 import { useState } from 'react';
 import { auth } from '../../config/firebase';
 import { useStore } from '../../stored';
+import './ChangePassword.css'
 
 const ChangePassword = () => {
   const [passwordEdit, setPasswordEdit] = useState(false);

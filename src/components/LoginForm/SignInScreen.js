@@ -70,11 +70,11 @@ const SignInScreen = () => {
                 setSignUp(true);
               }}
             >
-              <span className="singInScreen_singup">Đăng ký ngay</span>
+              <div className="forgotPassword">Đăng ký ngay</div>
             </Link>
           </h5>
 
-          <Link to="/forgotPassword">Quên mật khẩu</Link>
+          <Link className='forgotPassword' to="/forgotPassword">Quên mật khẩu</Link>
 
           <button
             className={`login-form-button login-form-google ${

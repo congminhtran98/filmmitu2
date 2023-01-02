@@ -90,8 +90,12 @@
   cursor: not-allowed;
 }
 
-.singInScreen_singup {
-  padding: 0 1rem;
+.forgotPassword{
   background-color: white;
-  cursor: pointer;
+  border: 1px solid black ;
+  padding: 5px;
+  margin: 0.5rem 1rem;
+  color: red;
+  text-align: center;
+  font-weight: 600;
 }

@@ -10,7 +10,7 @@ import { auth, db } from '../../config/firebase';
 import { addUser } from '../../actions/fireStoreActions';
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 
-import './SignInScreen.css';
+import './SignUpScreen.css';
 
 const SignUpScreen = () => {
   const schema = Yup.object({
@@ -82,16 +82,16 @@ const SignUpScreen = () => {
   }, [errors]);
 
   return (
-    <div className="signInScreen">
+    <div className="signUpScreen">
       <form onSubmit={handleSubmit(submitForm)}>
         <h1>Đăng ký thành viên</h1>
         <input
           type="text"
-          placeholder="First name"
+          placeholder="Họ"
           {...register('firstName')}
         />
-        <input type="text" placeholder="Last name" {...register('lastName')} />
-        <input type="email" placeholder="Email" {...register('email')} />
+        <input type="text" placeholder="Tên" {...register('lastName')} />
+        <input type="email" placeholder="Gmail" {...register('email')} />
         <input
           type="password"
           placeholder="Password"
