@@ -74,6 +74,8 @@ const SignInScreen = () => {
             </Link>
           </h5>
 
+          <Link to="/forgotPassword">Quên mật khẩu</Link>
+
           <button
             className={`login-form-button login-form-google ${
               loading ? 'disableButton' : ''
