@@ -55,16 +55,16 @@ const Banner = () => {
             </button>
             {isShown && (
               <div className="banner_button_hover">
-                <h1>Harry Potter and the Order of the Phoenix
-</h1>
+                <h1>Harry Potter and the Order of the Phoenix</h1>
                 <div>Thời lượng: 138 Phút</div>
-                <div>
-                  Thể loại: Phim Viễn Tưởng,
-                </div>
+                <div>Thể loại: Phim Viễn Tưởng,</div>
                 <div>Điểm IMDb:7,5</div>
                 <div>Năm Phát Hành: 2007</div>
                 <div>Quốc gia: Phim Âu Mỹ</div>
-                <div>Diễn viên: Emma Watson, Daniel Radcliffe, Ralph Fiennes, Rupert Grint,</div>
+                <div>
+                  Diễn viên: Emma Watson, Daniel Radcliffe, Ralph Fiennes,
+                  Rupert Grint,
+                </div>
                 <div>Đạo diễn: David Yates,</div>
               </div>
             )}
