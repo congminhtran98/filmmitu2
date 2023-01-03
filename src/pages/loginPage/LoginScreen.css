@@ -1,8 +1,9 @@
 .loginScreen {
   width: 100%;
-	height: 100vh;
-	position: relative;
-	background: url("https://assets.nflxext.com/ffe/siteui/vlv3/0678255b-ecfd-4775-999a-0680d539f07c/aa54bdde-6259-4f76-b724-a1d4db679427/VN-en-20221128-popsignuptwoweeks-perspective_alpha_website_large.jpg") no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+  background: url('https://assets.nflxext.com/ffe/siteui/vlv3/0678255b-ecfd-4775-999a-0680d539f07c/aa54bdde-6259-4f76-b724-a1d4db679427/VN-en-20221128-popsignuptwoweeks-perspective_alpha_website_large.jpg')
+    no-repeat center center/cover;
 }
 
 .loginScreen_logo {
@@ -40,7 +41,7 @@
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  z-index: 2;
+  z-index: 0;
 }
 .loginScreen_button:hover {
   background-color: black;
@@ -49,7 +50,7 @@
   border: red solid 1px;
 }
 
-.loginScreen_detail{
+.loginScreen_detail {
   width: 60%;
   margin: auto;
 }
@@ -73,7 +74,7 @@
 .loginScreen_body {
   position: absolute;
   top: 20%;
-  z-index: 1;
+  z-index: 0;
   text-align: center;
   color: #fff;
   padding: 1.2rem;
@@ -124,7 +125,7 @@
   background-color: black;
 }
 
-.loginScreen_animationcard_container{
+.loginScreen_animationcard_container {
   color: white;
   background-color: black;
   display: flex;
@@ -142,22 +143,22 @@
   width: 30%;
   margin-right: 2rem;
 }
-.loginScreen_animationcard_info > h1{
+.loginScreen_animationcard_info > h1 {
   font-size: 3rem;
 }
-.loginScreen_animationcard_info > h2{
+.loginScreen_animationcard_info > h2 {
   font-size: 1.5rem;
   font-weight: 600;
 }
-.loginScreen_animationcard_videobg{
+.loginScreen_animationcard_videobg {
   justify-content: flex-end;
   width: 3rem;
 }
-.loginScreen_animationcard_videobg img{
+.loginScreen_animationcard_videobg img {
   width: 30rem;
 }
 
-.loginScreen_animationcard_container1{
+.loginScreen_animationcard_container1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -167,16 +168,16 @@
   justify-content: center;
 }
 
-.loginScreen_animationcard_videobg1{
+.loginScreen_animationcard_videobg1 {
   width: 40rem;
   justify-content: flex-start;
 }
 
-.loginScreen_animationcard_videobg1 img{
+.loginScreen_animationcard_videobg1 img {
   width: 30rem;
 }
 
-.loginScreen_animationcard_info1{
+.loginScreen_animationcard_info1 {
   color: white;
   justify-content: flex-end;
   width: 34%;

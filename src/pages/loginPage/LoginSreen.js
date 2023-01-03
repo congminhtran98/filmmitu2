@@ -58,7 +58,6 @@ const LoginScreen = () => {
               </div>
               <div className="loginScreen_input">
                 <form>
-                  <input type="email" placeholder="Địa chỉ Email"></input>
                   <button
                     onClick={() => {
                       setSignIn(true);
@@ -68,10 +67,6 @@ const LoginScreen = () => {
                     Bắt đầu{' '}
                   </button>
                 </form>
-                <button className="loginScreen_getStarted">
-                  {' '}
-                  Tài khoản khách
-                </button>
               </div>
             </>
           )}

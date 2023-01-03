@@ -51,8 +51,9 @@ const SignUpScreen = () => {
       photoURL: auth.currentUser?.photoURL,
       displayName: auth.currentUser.displayName,
     });
-    toast.success('Đăng ký thành công ', {
-      position: toast.POSITION.TOP_RIGHT,
+    toast.success('Đăng ký thành công ');
+    return new Promise((res) => {
+      setTimeout(() => {}, 100);
     });
 
     // navigate('/');
@@ -61,7 +62,7 @@ const SignUpScreen = () => {
   useEffect(() => {
     const arrayErrors = Object.values(errors);
     if (arrayErrors.length > 0) {
-      toast.error(arrayErrors[0]?.message, { pauseOnHover: false });
+      alert(arrayErrors[0]?.message, { pauseOnHover: false });
     }
   }, [errors]);
 
