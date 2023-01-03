@@ -9,6 +9,7 @@ import { auth } from './config/firebase';
 import PrivateRoute from './components/Shared/PrivateRoute.js';
 import Loading from './components/Loading/Loading';
 import Watchplayer from './components/TV/Watchplayer';
+import WatchTrailer from './components/TV/WatchTrailer';
 
 import HomeScreen from './pages/Home/HomeScreen';
 import UserSetting from './pages/Profile/ProfileSetting';
@@ -57,23 +58,6 @@ function App() {
     });
   }, [setFavoriteList, setUser]);
 
-  // useEffect(() => {
-  //   // lưu thay đổi vào bộ nhớ cục bộ của trình duyệt
-  //   const unsubscribe = Auth.onAuthStateChanged((userAuth) => {
-  //     if (userAuth) {
-  //       //log in
-  //       setUser(userAuth);
-  //       return;
-  //     }
-  //     setUser(null);
-  //     return () => {
-  //       unsubscribe();
-  //     };
-  //   });
-
-  //   return unsubscribe;
-  // }, [setUser]);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.search, location.pathname]);
@@ -84,16 +68,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <HomeScreen /> */}
-      {/* bat buoc phai co tai khoan, neu khong se back ve Login */}
-      {/* {!user ? (
-        <LoginScreen />
-
-      ) : (
-        
-      )}
-
-      ) : ( */}
       <Routes>
         <Route path="/profile" element={<ProfileScreen />}></Route>
         <Route path="/" element={<HomeScreen />}></Route>
@@ -113,6 +87,7 @@ function App() {
         <Route path="/player" element={<Player />}></Route>
         <Route path="/navside" element={<Navside />}></Route>
         <Route path="/watchplayer" element={<Watchplayer />}></Route>
+        <Route path="/watchTrailer" element={<WatchTrailer />}></Route>
         <Route path="/moviescreen" element={<MovieScreen />}></Route>
         <Route path="/tvscreen" element={<TVScreen />}></Route>
         <Route path="/aboutus" element={<AboutUs />}></Route>
@@ -130,7 +105,6 @@ function App() {
         ></Route>
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-      {/* )} */}
     </div>
   );
 }

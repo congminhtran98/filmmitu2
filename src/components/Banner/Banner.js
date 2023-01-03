@@ -39,7 +39,7 @@ const Banner = () => {
         </h1>
         <div className="banner_buttons">
           <div className="banner_button_left">
-            <Link className="banner_button" to={`/watchplayer`}>
+            <Link className="banner_button" to={`/watchTrailer`}>
               Trailer
             </Link>
             <Link className="banner_button" to={`/watchplayer`}>
