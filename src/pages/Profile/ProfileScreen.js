@@ -7,6 +7,7 @@ import './ProfileScreen.css';
 import Navside from '../../components/Nav/NavSide';
 import Footer from '../../components/Footer/Footer';
 import Title from '../../components/Shared/Tittle';
+import ChangePassword from './ChangePassword';
 
 // import { auth } from '../Library/firebase';
 
@@ -35,12 +36,8 @@ const ProfileScreen = () => {
               </h1>
             </div>
           </div>
-          <div className="profileScreen_changePassword">
-            <Link to="/changePassword">
-              <p className="link-text">Thay đổi mật khẩu</p>
-            </Link>
-          </div>
         </div>
+
         <Footer />
       </div>
     </div>
