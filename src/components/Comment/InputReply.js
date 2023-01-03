@@ -13,7 +13,7 @@ const InputReply = ({ user, commentParentId, movieId, setShowReply }) => {
       movieId: movieId,
       userId: user.uid,
       userName: user.displayName,
-      avatar: user.photoURL,
+      avatar: user?.photoURL ? user?.photoURL : '/user-non-avatar.png',
       content: comment,
       reactions: [],
       created_at: Date.now(),

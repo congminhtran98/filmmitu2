@@ -103,7 +103,9 @@ const ChangePassword = () => {
                   {loading ? (
                     <div></div>
                   ) : (
-                    <div className="changePassButton">Xác nhận đổi mật khẩu</div>
+                    <div className="changePassButton">
+                      Xác nhận đổi mật khẩu
+                    </div>
                   )}
                 </button>
               </div>

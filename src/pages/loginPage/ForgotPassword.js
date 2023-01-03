@@ -32,7 +32,7 @@ const ForgotPassword = () => {
         theme: 'light',
       });
     } catch (error) {
-      toast.success('Không gửi được email', {
+      toast.warn('Không gửi được email', {
         position: 'top-center',
         autoClose: 5000,
         hideProgressBar: false,
