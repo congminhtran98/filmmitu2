@@ -55,17 +55,17 @@ const Banner = () => {
             </button>
             {isShown && (
               <div className="banner_button_hover">
-                <h1>Avengers - Endgame</h1>
-                <div>Thời lượng: 181 Phút</div>
+                <h1>Harry Potter and the Order of the Phoenix
+</h1>
+                <div>Thời lượng: 138 Phút</div>
                 <div>
-                  Thể loại: Phim Hành Động, Phim Viễn Tưởng, Phim Phiêu Lưu,
-                  Phim Chiếu Rạp
+                  Thể loại: Phim Viễn Tưởng,
                 </div>
-                <div>Điểm IMDb:8,7</div>
-                <div>Năm Phát Hành: 2019</div>
+                <div>Điểm IMDb:7,5</div>
+                <div>Năm Phát Hành: 2007</div>
                 <div>Quốc gia: Phim Âu Mỹ</div>
-                <div>Diễn viên:</div>
-                <div>Đạo diễn:</div>
+                <div>Diễn viên: Emma Watson, Daniel Radcliffe, Ralph Fiennes, Rupert Grint,</div>
+                <div>Đạo diễn: David Yates,</div>
               </div>
             )}
           </div>
