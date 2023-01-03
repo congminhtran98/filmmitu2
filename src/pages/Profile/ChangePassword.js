@@ -7,7 +7,9 @@ import {
 import { useState } from 'react';
 import { auth } from '../../config/firebase';
 import { useStore } from '../../stored';
-import './ChangePassword.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import './ChangePassword.css';
 
 const ChangePassword = () => {
   const [passwordEdit, setPasswordEdit] = useState(false);
@@ -55,7 +57,16 @@ const ChangePassword = () => {
                     !newPassword.trim().length ||
                     !oldPassword.trim().length
                   ) {
-                    alert('Enter your password');
+                    toast.warn('Nhập mật khẩu của bạn', {
+                      position: 'top-center',
+                      autoClose: 5000,
+                      hideProgressBar: false,
+                      closeOnClick: true,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                      theme: 'light',
+                    });
                     return;
                   }
                   setLoading(true);
@@ -69,7 +80,16 @@ const ChangePassword = () => {
                   );
                   updatePassword(auth.currentUser, newPassword)
                     .then((res) => {
-                      alert('Update successfully.');
+                      toast.warn('Đổi mật khẩu thành công!', {
+                        position: 'top-center',
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: 'light',
+                      });
                     })
                     .catch((err) => {
                       console.log(err.code);
@@ -110,6 +130,7 @@ const ChangePassword = () => {
           </div>
         )}
       </form>
+      <ToastContainer />
     </div>
   );
 };

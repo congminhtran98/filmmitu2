@@ -5,6 +5,8 @@ import { Auth } from '../../config/firebase';
 import { auth, googleProvider } from '../../config/firebase';
 import { addUser } from '../../actions/fireStoreActions';
 import { useStore } from '../../stored';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import './SignInScreen.css';
 
@@ -26,7 +28,16 @@ const SignInScreen = () => {
         console.log(AuthUser);
       })
       .catch((error) => {
-        alert(error.message);
+        toast.warn(error.message, {
+          position: 'top-center',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'light',
+        });
       });
   };
 
@@ -74,7 +85,9 @@ const SignInScreen = () => {
             </Link>
           </h5>
 
-          <Link className='forgotPassword' to="/forgotPassword">Quên mật khẩu</Link>
+          <Link className="forgotPassword" to="/forgotPassword">
+            Quên mật khẩu
+          </Link>
 
           <button
             className={`login-form-button login-form-google ${
@@ -93,6 +106,7 @@ const SignInScreen = () => {
           </button>
         </form>
       )}
+      <ToastContainer />
     </div>
   );
 };

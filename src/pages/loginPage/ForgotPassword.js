@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { getAuth, sendPasswordResetEmail } from 'firebase/auth';
 import { ArrowRight } from '@mui/icons-material';
 
@@ -15,9 +17,27 @@ const ForgotPassword = () => {
     try {
       const auth = getAuth();
       await sendPasswordResetEmail(auth, email);
-      alert('Email đã được gửi');
+      toast.success('Email đã được gửi', {
+        position: 'top-center',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
     } catch (error) {
-      alert('Không gửi được email');
+      toast.success('Không gửi được email', {
+        position: 'top-center',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
     }
   };
 
@@ -49,6 +69,7 @@ const ForgotPassword = () => {
           </div>
         </form>
       </main>
+      <ToastContainer />
     </div>
   );
 };

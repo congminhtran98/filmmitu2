@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import StarRatings from 'react-star-ratings';
 
 import './Details.css';
@@ -69,7 +70,16 @@ function DetailsMovie() {
       const movieExist = favoriteList.some((item) => item.movie.id === data.id);
 
       if (movieExist) {
-        return alert('Movies already exist');
+        return toast.warn('Phim đã tồn tại trong danh mục', {
+          position: 'top-center',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'colored',
+        });
       }
     }
 
@@ -77,7 +87,16 @@ function DetailsMovie() {
     const newFavorite = await addMovieFromPlaylist(user.uid, data, media_type);
     setFavoriteList([...favoriteList, newFavorite]);
     setLoadingAddMovie(false);
-    alert('Add new favorite success !');
+    toast.success('Thêm phim thành công', {
+      position: 'top-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'colored',
+    });
   };
 
   return (
@@ -173,7 +192,6 @@ function DetailsMovie() {
                   <span
                     className="watch-link"
                     title="Thêm vào danh mục của tôi"
-                    onClick={handleAddToFavorites}
                   >
                     <AiOutlineHeart onClick={handleAddToFavorites} />
                   </span>
@@ -205,6 +223,7 @@ function DetailsMovie() {
 
         {loadingAddMovie && <Loading />}
         <Footer />
+        <ToastContainer />
       </div>
     </div>
   );

@@ -1,13 +1,12 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { addDoc, collection } from 'firebase/firestore';
 import { auth, db } from '../../config/firebase';
-import { addUser } from '../../actions/fireStoreActions';
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 
 import './SignUpScreen.css';
@@ -34,24 +33,6 @@ const SignUpScreen = () => {
     formState: { errors, isValid, isSubmitting, isSubmitted },
   } = useForm({ resolver: yupResolver(schema), mode: 'onChange' });
 
-  // async function register(e) {
-  //   e.preventDefault();
-  //   try {
-  //     const { _tokenResponse, user } = await createUserWithEmailAndPassword(
-  //       auth,
-  //       emailRef.current.value,
-  //       passwordRef.current.value
-  //     );
-  //     const { displayName = emailRef, email, photoURL, uid } = user;
-  //     if (_tokenResponse.isNewUser) {
-  //       await addUser({ displayName, email, photoURL, uid });
-  //     }
-  //   } catch (error) {
-  //     alert(error.message);
-  //     // toast.error(error.message);
-  //   }
-  // }
-  const navigate = useNavigate();
   const submitForm = async (values) => {
     if (!isValid) return;
     console.log(isSubmitted);
@@ -70,8 +51,20 @@ const SignUpScreen = () => {
       photoURL: auth.currentUser?.photoURL,
       displayName: auth.currentUser.displayName,
     });
-    toast.success('Register successfully');
-    navigate('/');
+    toast.success('Đăng ký thành công ', {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+    toast.success('🦄 Wow so easy!', {
+      position: 'top-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'light',
+    });
+    // navigate('/');
   };
 
   useEffect(() => {
@@ -85,11 +78,7 @@ const SignUpScreen = () => {
     <div className="signUpScreen">
       <form onSubmit={handleSubmit(submitForm)}>
         <h1>Đăng ký thành viên</h1>
-        <input
-          type="text"
-          placeholder="Họ"
-          {...register('firstName')}
-        />
+        <input type="text" placeholder="Họ" {...register('firstName')} />
         <input type="text" placeholder="Tên" {...register('lastName')} />
         <input type="email" placeholder="Gmail" {...register('email')} />
         <input
@@ -99,6 +88,7 @@ const SignUpScreen = () => {
         />
         <button type="submit">Đăng ký ngay</button>
       </form>
+      <ToastContainer />
     </div>
   );
 };

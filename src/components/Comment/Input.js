@@ -24,7 +24,13 @@ const Input = ({ user, comment, setComment, loading }) => {
         ) : (
           <div className="not-comment">
             <h3>
-              You need <Link>login</Link> to comment
+              You need{' '}
+              <Link
+                to={`/signIn?redirect=${encodeURIComponent(location.pathname)}`}
+              >
+                login
+              </Link>{' '}
+              to comment
             </h3>
           </div>
         )}

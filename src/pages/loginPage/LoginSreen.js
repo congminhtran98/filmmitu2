@@ -11,11 +11,12 @@ import Money from '../../images/loginScreen_cardInfo_money.webp';
 import logo from '../../images/logo.png';
 import { useStore } from '../../stored';
 import { useSearchParams } from '../../hooks/useSearchParams';
-import { Navigate } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 
 const LoginScreen = () => {
   const [signIn, setSignIn] = useState(false);
   const { user, loading } = useStore((state) => state);
+
   const searchParams = useSearchParams();
   if (user) return <Navigate to={searchParams.get('redirect') || '/'} />;
 
@@ -23,7 +24,9 @@ const LoginScreen = () => {
     <div>
       <div className="loginScreen">
         <div className="loginScreen_background">
-          <img className="loginScreen_logo" src={logo} alt=""></img>
+          <Link to="/">
+            <img className="loginScreen_logo" src={logo} alt=""></img>
+          </Link>
           <button
             onClick={() => {
               setSignIn(true);
