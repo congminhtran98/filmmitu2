@@ -4,6 +4,10 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { getAuth, sendPasswordResetEmail } from 'firebase/auth';
 import { ArrowRight } from '@mui/icons-material';
+import './ForgotPassword.css';
+
+import NavSide from '../../components/Nav/NavSide';
+import Footer from '../../components/Footer/Footer';
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState('');
@@ -42,34 +46,39 @@ const ForgotPassword = () => {
   };
 
   return (
-    <div className="pageContainer">
-      <header>
-        <p className="pageHeader">Quên mật khẩu</p>
-      </header>
+    <div>
+      <NavSide />
+      <div className="bodyside">
+        <div className="pageContainer">
+          <header>
+            <p className="pageHeader">Quên mật khẩu?</p>
+          </header>
+          <main>
+            <form onSubmit={onSubmit}>
+              <input
+                type="email"
+                className="emailInput"
+                placeholder="Email"
+                id="email"
+                value={email}
+                onChange={onChange}
+              ></input>
 
-      <main>
-        <form onSubmit={onSubmit}>
-          <input
-            type="email"
-            className="emailInput"
-            placeholder="Email"
-            id="email"
-            value={email}
-            onChange={onChange}
-          ></input>
-          <Link className="forgotPasswordLink" to="/signIn">
+              <div className="signInBar">
+                <div className="signInText">Send reset link</div>
+                <button className="signInButton">
+                  <ArrowRight></ArrowRight>
+                </button>
+              </div>
+            </form>
+          </main>
+          <Link className="loginScreen_button" to="/signIn">
             Đăng Nhập
           </Link>
-
-          <div className="signInBar">
-            <div className="signInText">Send Reset Link</div>
-            <button className="signInButton">
-              <ArrowRight></ArrowRight>
-            </button>
-          </div>
-        </form>
-      </main>
-      <ToastContainer />
+          <ToastContainer />
+        </div>
+        <Footer />
+      </div>
     </div>
   );
 };
