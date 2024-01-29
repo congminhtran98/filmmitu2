@@ -2,16 +2,20 @@ import { initializeApp } from 'firebase/app';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
-import { FacebookAuthProvider, getAuth, GoogleAuthProvider } from 'firebase/auth';
+import {
+  FacebookAuthProvider,
+  getAuth,
+  GoogleAuthProvider,
+} from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_API_KEY_FireBase,
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_storageBucket,
-  messagingSenderId: process.env.REACT_APP_messagingSenderId,
-  appId: process.env.REACT_APP_appId
+  apiKey: 'AIzaSyCtpiKl__LbgZ2GVL1F4PoRSlqpaEHPpBo',
+  authDomain: 'netflix-clone-77faf.firebaseapp.com',
+  projectId: 'netflix-clone-77faf',
+  storageBucket: 'netflix-clone-77faf.appspot.com',
+  messagingSenderId: '969313058050',
+  appId: '1:969313058050:web:27934e7eeb95ada989d61b',
 };
 
 const app = initializeApp(firebaseConfig);

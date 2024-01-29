@@ -23,7 +23,7 @@ const SliderMovie = ({ type }) => {
 
   const width = useInnerWidth();
 
-  let item;
+  let item = 0;
 
   if (width >= 1024) {
     item = 5;
@@ -65,6 +65,7 @@ const SliderMovie = ({ type }) => {
           <Button content={'Xem thêm'} />
         </Link>
       </div>
+      {console.log(movie)}
       <Swiper
         navigation
         grabCursor={true}
@@ -72,7 +73,7 @@ const SliderMovie = ({ type }) => {
         slidesPerView={item}
       >
         {!loading ? (
-          movie.map((item) => (
+          movie?.map((item) => (
             <SwiperSlide key={item.id}>
               <Link to={`/details/movie/${item.id}`}>
                 <MovieItem data={item} />
